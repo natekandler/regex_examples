@@ -1,0 +1,28 @@
+capture groups
+explanation - 
+examples - 
+
+character sets
+explanation - 
+examples - 
+
+match
+check formatting, validation, doesn’t need to use match data returned. pattern match to capture, pull email prover from address
+
+gsub
+
+formatting phone numbers
+will match with dashes, captures until there isn't an integer from 
+beginning of line
+/^[0-9]+/
+
+will capture three integers from beginning of line
+/^[0-9][0-9][0-9]/
+
+captures exactly 3 of 0-9, but all instances
+[0-9]{3}
+
+lookbehind on openening parentheses
+captures exactly 3 of 0-9
+(?<=\()([0-9]{3})
+
