@@ -26,3 +26,10 @@ lookbehind on openening parentheses
 captures exactly 3 of 0-9
 (?<=\()([0-9]{3})
 
+Two of the most common uses for regular expressions are checking to see if data matches a specific format (think of validating an email) or changing data to match a specific format (think of changing slashes to dashes in a date to make sure all formatted the same)
+
+For the first type of example we're going to use the #match method from Ruby's regular expression class. Match will return a match data object or nil if there is no match.
+
+Match Reference – MatchData acts as an array, and may be accessed using the normal array indexing techniques. mtch[0] is equivalent to the special variable $&, and returns the entire matched string. mtch[1], mtch[2], and so on return the values of the matched backreferences (portions of the pattern between parentheses).
+
+regex to match phone - /^[0-9][0-9][0-9]|(?<=\()([0-9]{3})/
